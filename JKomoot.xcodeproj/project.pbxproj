@@ -8,10 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		C25BEBFA2C402270005C1C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BEBF92C402270005C1C0D /* AppDelegate.swift */; };
-		C25BEBFE2C402270005C1C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BEBFD2C402270005C1C0D /* ViewController.swift */; };
+		C25BEBFE2C402270005C1C0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BEBFD2C402270005C1C0D /* HomeViewController.swift */; };
 		C25BEC032C402276005C1C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25BEC022C402276005C1C0D /* Assets.xcassets */; };
 		C25BEC062C402276005C1C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C25BEC042C402276005C1C0D /* LaunchScreen.storyboard */; };
 		C25BEC112C402276005C1C0D /* JKomootTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25BEC102C402276005C1C0D /* JKomootTests.swift */; };
+		C269A6DC2C4169FE005C2791 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6DB2C4169FE005C2791 /* HomeRouter.swift */; };
+		C269A6DE2C416AA5005C2791 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6DD2C416AA5005C2791 /* MainRouter.swift */; };
+		C269A6E22C416B8D005C2791 /* JFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = C269A6E12C416B8D005C2791 /* JFoundation */; };
+		C269A6E42C416B8D005C2791 /* JUI in Frameworks */ = {isa = PBXBuildFile; productRef = C269A6E32C416B8D005C2791 /* JUI */; };
+		C269A6E82C416C24005C2791 /* JData in Frameworks */ = {isa = PBXBuildFile; productRef = C269A6E72C416C24005C2791 /* JData */; };
+		C269A6EA2C416D7E005C2791 /* TrackingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6E92C416D7E005C2791 /* TrackingScreen.swift */; };
+		C269A6EC2C416D85005C2791 /* TrackingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6EB2C416D85005C2791 /* TrackingViewModel.swift */; };
+		C269A6EE2C416D8E005C2791 /* TrackingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */; };
+		C269A6F02C416E71005C2791 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6EF2C416E71005C2791 /* TrackingViewController.swift */; };
+		C269A6F22C416F7A005C2791 /* HomeRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6F12C416F7A005C2791 /* HomeRouterDelegate.swift */; };
+		C269A6F42C4171E1005C2791 /* TrackingRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,12 +38,23 @@
 /* Begin PBXFileReference section */
 		C25BEBF62C402270005C1C0D /* JKomoot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKomoot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BEBF92C402270005C1C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C25BEBFD2C402270005C1C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C25BEBFD2C402270005C1C0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C25BEC022C402276005C1C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25BEC052C402276005C1C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C25BEC072C402276005C1C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C25BEC0C2C402276005C1C0D /* JKomootTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKomootTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C25BEC102C402276005C1C0D /* JKomootTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKomootTests.swift; sourceTree = "<group>"; };
+		C269A6DB2C4169FE005C2791 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		C269A6DD2C416AA5005C2791 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		C269A6DF2C416B01005C2791 /* JUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JUI; sourceTree = "<group>"; };
+		C269A6E62C416C1B005C2791 /* JData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JData; sourceTree = "<group>"; };
+		C269A6E92C416D7E005C2791 /* TrackingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingScreen.swift; sourceTree = "<group>"; };
+		C269A6EB2C416D85005C2791 /* TrackingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewModel.swift; sourceTree = "<group>"; };
+		C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRouter.swift; sourceTree = "<group>"; };
+		C269A6EF2C416E71005C2791 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
+		C269A6F12C416F7A005C2791 /* HomeRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterDelegate.swift; sourceTree = "<group>"; };
+		C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRouterDelegate.swift; sourceTree = "<group>"; };
+		C269CFA92C41683C00B27817 /* JFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JFoundation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C269A6E82C416C24005C2791 /* JData in Frameworks */,
+				C269A6E22C416B8D005C2791 /* JFoundation in Frameworks */,
+				C269A6E42C416B8D005C2791 /* JUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +81,11 @@
 		C25BEBED2C402270005C1C0D = {
 			isa = PBXGroup;
 			children = (
+				C269CFA82C41683C00B27817 /* Packages */,
 				C25BEBF82C402270005C1C0D /* JKomoot */,
 				C25BEC0F2C402276005C1C0D /* JKomootTests */,
 				C25BEBF72C402270005C1C0D /* Products */,
+				C269A6E02C416B8D005C2791 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,8 +101,10 @@
 		C25BEBF82C402270005C1C0D /* JKomoot */ = {
 			isa = PBXGroup;
 			children = (
+				C269A6D92C4169D7005C2791 /* TrackingFeature */,
+				C269A6D82C4169CF005C2791 /* HomeFeature */,
 				C25BEBF92C402270005C1C0D /* AppDelegate.swift */,
-				C25BEBFD2C402270005C1C0D /* ViewController.swift */,
+				C269A6DD2C416AA5005C2791 /* MainRouter.swift */,
 				C25BEC022C402276005C1C0D /* Assets.xcassets */,
 				C25BEC042C402276005C1C0D /* LaunchScreen.storyboard */,
 				C25BEC072C402276005C1C0D /* Info.plist */,
@@ -89,6 +118,45 @@
 				C25BEC102C402276005C1C0D /* JKomootTests.swift */,
 			);
 			path = JKomootTests;
+			sourceTree = "<group>";
+		};
+		C269A6D82C4169CF005C2791 /* HomeFeature */ = {
+			isa = PBXGroup;
+			children = (
+				C25BEBFD2C402270005C1C0D /* HomeViewController.swift */,
+				C269A6DB2C4169FE005C2791 /* HomeRouter.swift */,
+				C269A6F12C416F7A005C2791 /* HomeRouterDelegate.swift */,
+			);
+			path = HomeFeature;
+			sourceTree = "<group>";
+		};
+		C269A6D92C4169D7005C2791 /* TrackingFeature */ = {
+			isa = PBXGroup;
+			children = (
+				C269A6E92C416D7E005C2791 /* TrackingScreen.swift */,
+				C269A6EF2C416E71005C2791 /* TrackingViewController.swift */,
+				C269A6EB2C416D85005C2791 /* TrackingViewModel.swift */,
+				C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */,
+				C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */,
+			);
+			path = TrackingFeature;
+			sourceTree = "<group>";
+		};
+		C269A6E02C416B8D005C2791 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C269CFA82C41683C00B27817 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C269CFA92C41683C00B27817 /* JFoundation */,
+				C269A6DF2C416B01005C2791 /* JUI */,
+				C269A6E62C416C1B005C2791 /* JData */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +175,11 @@
 			dependencies = (
 			);
 			name = JKomoot;
+			packageProductDependencies = (
+				C269A6E12C416B8D005C2791 /* JFoundation */,
+				C269A6E32C416B8D005C2791 /* JUI */,
+				C269A6E72C416C24005C2791 /* JData */,
+			);
 			productName = JKomoot;
 			productReference = C25BEBF62C402270005C1C0D /* JKomoot.app */;
 			productType = "com.apple.product-type.application";
@@ -191,8 +264,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25BEBFE2C402270005C1C0D /* ViewController.swift in Sources */,
+				C25BEBFE2C402270005C1C0D /* HomeViewController.swift in Sources */,
+				C269A6F02C416E71005C2791 /* TrackingViewController.swift in Sources */,
+				C269A6F42C4171E1005C2791 /* TrackingRouterDelegate.swift in Sources */,
+				C269A6F22C416F7A005C2791 /* HomeRouterDelegate.swift in Sources */,
+				C269A6EC2C416D85005C2791 /* TrackingViewModel.swift in Sources */,
+				C269A6DE2C416AA5005C2791 /* MainRouter.swift in Sources */,
+				C269A6DC2C4169FE005C2791 /* HomeRouter.swift in Sources */,
+				C269A6EA2C416D7E005C2791 /* TrackingScreen.swift in Sources */,
 				C25BEBFA2C402270005C1C0D /* AppDelegate.swift in Sources */,
+				C269A6EE2C416D8E005C2791 /* TrackingRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +434,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +461,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +544,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C269A6E12C416B8D005C2791 /* JFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JFoundation;
+		};
+		C269A6E32C416B8D005C2791 /* JUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JUI;
+		};
+		C269A6E72C416C24005C2791 /* JData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = JData;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C25BEBEE2C402270005C1C0D /* Project object */;
 }
