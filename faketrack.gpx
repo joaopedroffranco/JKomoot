@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="Open GPX Tracker for iOS">
+	<wpt lat="52.352760324324585" lon="4.9001262544384465">
+		<ele>1.989624261856079</ele>
+		<time>2024-07-16T13:42:57Z</time>
+		<name>15:42:57</name>
+		<desc>16 de jul. de 2024, 15:42:57</desc>
+	</wpt>
+	<wpt lat="52.35252757469376" lon="4.899238661828026">
+		<time>2024-07-16T13:43:00Z</time>
+		<name>15:43:00</name>
+		<desc>16 de jul. de 2024, 15:43:00</desc>
+	</wpt>
+	<wpt lat="52.35248241694814" lon="4.898665891864466">
+		<time>2024-07-16T13:43:05Z</time>
+		<name>15:43:05</name>
+		<desc>16 de jul. de 2024, 15:43:05</desc>
+	</wpt>
+	<wpt lat="52.35238958056604" lon="4.898147335004645">
+		<time>2024-07-16T13:43:08Z</time>
+		<name>15:43:08</name>
+		<desc>16 de jul. de 2024, 15:43:08</desc>
+	</wpt>
+	<wpt lat="52.35231203470212" lon="4.897560829198717">
+		<time>2024-07-16T13:43:10Z</time>
+		<name>15:43:10</name>
+		<desc>16 de jul. de 2024, 15:43:10</desc>
+	</wpt>
+	<wpt lat="52.352232304339644" lon="4.897019026629582">
+		<time>2024-07-16T13:43:13Z</time>
+		<name>15:43:13</name>
+		<desc>16 de jul. de 2024, 15:43:13</desc>
+	</wpt>
+	<wpt lat="52.35218315540412" lon="4.896486164724233">
+		<time>2024-07-16T13:43:15Z</time>
+		<name>15:43:15</name>
+		<desc>16 de jul. de 2024, 15:43:15</desc>
+	</wpt>
+	<wpt lat="52.3521091696119" lon="4.895947222579979">
+		<time>2024-07-16T13:43:19Z</time>
+		<name>15:43:19</name>
+		<desc>16 de jul. de 2024, 15:43:19</desc>
+	</wpt>
+	<wpt lat="52.35203162330604" lon="4.8953768099195845">
+		<time>2024-07-16T13:43:22Z</time>
+		<name>15:43:22</name>
+		<desc>16 de jul. de 2024, 15:43:22</desc>
+	</wpt>
+	<trk>
+	</trk>
+</gpx>

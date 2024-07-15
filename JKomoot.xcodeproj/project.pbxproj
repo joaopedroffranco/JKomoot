@@ -22,7 +22,6 @@
 		C269A6EE2C416D8E005C2791 /* TrackingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */; };
 		C269A6F02C416E71005C2791 /* TrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6EF2C416E71005C2791 /* TrackingViewController.swift */; };
 		C269A6F22C416F7A005C2791 /* HomeRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6F12C416F7A005C2791 /* HomeRouterDelegate.swift */; };
-		C269A6F42C4171E1005C2791 /* TrackingRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +52,6 @@
 		C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRouter.swift; sourceTree = "<group>"; };
 		C269A6EF2C416E71005C2791 /* TrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingViewController.swift; sourceTree = "<group>"; };
 		C269A6F12C416F7A005C2791 /* HomeRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouterDelegate.swift; sourceTree = "<group>"; };
-		C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRouterDelegate.swift; sourceTree = "<group>"; };
 		C269CFA92C41683C00B27817 /* JFoundation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = JFoundation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +135,6 @@
 				C269A6EF2C416E71005C2791 /* TrackingViewController.swift */,
 				C269A6EB2C416D85005C2791 /* TrackingViewModel.swift */,
 				C269A6ED2C416D8E005C2791 /* TrackingRouter.swift */,
-				C269A6F32C4171E1005C2791 /* TrackingRouterDelegate.swift */,
 			);
 			path = TrackingFeature;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			files = (
 				C25BEBFE2C402270005C1C0D /* HomeViewController.swift in Sources */,
 				C269A6F02C416E71005C2791 /* TrackingViewController.swift in Sources */,
-				C269A6F42C4171E1005C2791 /* TrackingRouterDelegate.swift in Sources */,
 				C269A6F22C416F7A005C2791 /* HomeRouterDelegate.swift in Sources */,
 				C269A6EC2C416D85005C2791 /* TrackingViewModel.swift in Sources */,
 				C269A6DE2C416AA5005C2791 /* MainRouter.swift in Sources */,
@@ -430,6 +426,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JKomoot/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requests your location to enhance your tracking experience.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -457,6 +454,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JKomoot/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requests your location to enhance your tracking experience.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

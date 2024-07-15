@@ -1,7 +1,4 @@
 //
-//  JKomootTests.swift
-//  JKomootTests
-//
 //  Created by Joao Pedro Franco on 11/07/24.
 //
 

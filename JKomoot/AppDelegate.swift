@@ -1,7 +1,4 @@
 //
-//  AppDelegate.swift
-//  JKomoot
-//
 //  Created by Joao Pedro Franco on 11/07/24.
 //
 
@@ -21,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	private func startApp() {
 		let navigationController = UINavigationController()
-
+		
 		window?.rootViewController = navigationController
 		window?.makeKeyAndVisible()
 

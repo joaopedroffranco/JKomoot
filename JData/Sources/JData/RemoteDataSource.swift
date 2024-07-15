@@ -1,7 +1,4 @@
 //
-//  API.swift
-//  JFoudationRepository
-//
 //  Created by João Pedro Fabiano Franco on 07.09.23.
 //
 
@@ -25,14 +22,13 @@ public class RemoteDataSource: DataSourceProtocol {
       throw RemoteDataSourceError.invalidRequest
     }
 
-    let (data, _) = try await session.data(for: request)
-    let decoder = JSONDecoder()
-
-    do {
-      return try decoder.decode(T.self, from: data)
-    } catch {
-      throw RemoteDataSourceError.decodeError
-    }
+		do {
+			let (data, _) = try await session.data(for: request)
+			let decoder = JSONDecoder()
+			return try decoder.decode(T.self, from: data)
+		} catch {
+			throw RemoteDataSourceError.decodeError
+		}
   }
 
   public func post(request: Requestable) async throws {

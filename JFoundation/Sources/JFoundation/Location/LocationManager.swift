@@ -5,22 +5,38 @@
 import Combine
 import CoreLocation
 
-public protocol LocationProtocol {
-  var currentStatus: LocationAuthorizationStatus { get }
+public protocol LocationManagerProtocol {
+	var currentStatus: CurrentValueSubject<LocationAuthorizationStatus, Never> { get }
+	var currentLocation: CurrentValueSubject<CLLocation?, Never> { get }
+
+	func startTracking(within: Double)
+	func stopTracking()
 }
 
-public class LocationManager: NSObject, LocationProtocol {
+public class LocationManager: NSObject, LocationManagerProtocol {
   var nativeLocationManager: CLLocationManager
 
-  public var currentStatus: LocationAuthorizationStatus
-
+  public var currentStatus: CurrentValueSubject<LocationAuthorizationStatus, Never>
+	public var currentLocation: CurrentValueSubject<CLLocation?, Never>
+	
   public init(nativeLocationManager: CLLocationManager = CLLocationManager()) {
     self.nativeLocationManager = nativeLocationManager
-    self.currentStatus = LocationAuthorizationStatus(from: self.nativeLocationManager.authorizationStatus)
+		self.currentStatus = .init(LocationAuthorizationStatus(from: self.nativeLocationManager.authorizationStatus))
+		self.currentLocation = .init(nil)
     super.init()
     self.nativeLocationManager.delegate = self
     requestAuthorizationIfNeeded()
   }
+	
+	public func startTracking(within: Double) {
+		nativeLocationManager.allowsBackgroundLocationUpdates = true
+		nativeLocationManager.distanceFilter = within
+		nativeLocationManager.startUpdatingLocation()
+	}
+	
+	public func stopTracking() {
+		nativeLocationManager.stopUpdatingLocation()
+	}
 
   private func requestAuthorizationIfNeeded() {
     nativeLocationManager.requestWhenInUseAuthorization()
@@ -31,8 +47,12 @@ extension LocationManager: CLLocationManagerDelegate {
   public func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
     let newStatus = LocationAuthorizationStatus(from: manager.authorizationStatus)
 
-    if newStatus != currentStatus {
-      currentStatus = newStatus
+		if newStatus != currentStatus.value {
+			currentStatus.send(newStatus)
     }
   }
+	
+	public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+		currentLocation.send(locations.last)
+	}
 }

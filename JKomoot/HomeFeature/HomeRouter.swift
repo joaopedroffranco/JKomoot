@@ -1,7 +1,4 @@
 //
-//  HomeRouter.swift
-//  JKomoot
-//
 //  Created by Joao Pedro Franco on 12/07/24.
 //
 
@@ -10,9 +7,7 @@ import JFoundation
 import UIKit
 
 class HomeRouter: RouterProtocol {
-	var parentRouter: RouterProtocol?
-	var nextRouter: RouterProtocol?
-	
+	var parentRouter: RouterDelegate?
 	let navigationController: UINavigationController
 	
 	init(navigationController: UINavigationController) {
@@ -20,7 +15,6 @@ class HomeRouter: RouterProtocol {
 	}
 	
 	func start() {
-//		didStartTracking()
 		let viewController = HomeViewController()
 		viewController.router = self
 		navigationController.setViewControllers([viewController], animated: false)
@@ -33,10 +27,8 @@ class HomeRouter: RouterProtocol {
 
 extension HomeRouter: HomeRouterDelegate {
 	func didStartTracking() {
-		nextRouter = TrackingRouter(
-			navigatioController: navigationController,
-			parentRouter: self
-		)
-		nextRouter?.start()
+		let trackingRouter = TrackingRouter(navigatioController: navigationController)
+		trackingRouter.parentRouter = self
+		trackingRouter.start()
 	}
 }

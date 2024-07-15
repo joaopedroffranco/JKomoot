@@ -1,7 +1,4 @@
 //
-//  TrackingViewModel.swift
-//  JKomoot
-//
 //  Created by Joao Pedro Franco on 12/07/24.
 //
 
@@ -11,32 +8,75 @@ import JFoundation
 import JData
 
 class TrackingViewModel: ObservableObject {
-	weak var router: TrackingRouterDelegate?
+	var router: RouterDelegate?
 	
-	@Published var trackingImages: [String] = []
+	@Published var state: TrackingScreenState = .idle
 	
-	private var flickrService: FlickrServiceProtocol
+	private let flickrService: FlickrServiceProtocol
+	private let locationManager: LocationManagerProtocol
+	private var cancellables: [AnyCancellable] = []
 	
-	init(flickrService: FlickrServiceProtocol = FlickrService()) {
+	init(
+		flickrService: FlickrServiceProtocol = FlickrService(),
+		locationManager: LocationManagerProtocol = LocationManager()
+	) {
 		self.flickrService = flickrService
+		self.locationManager = locationManager
 	}
 	
-	func start() {
-		Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getFlickrImage), userInfo: nil, repeats: true)
+	// MARK: Actions
+	func onAppear() {
+		setupLocationObservers()
+	}
+
+	@objc func stopTracking() {
+		router?.dismiss()
 	}
 	
 	deinit {
-		router?.dismiss()
+		locationManager.stopTracking()
 	}
 }
 
+// MARK: Location
+private extension TrackingViewModel {
+	func setupLocationObservers() {
+		locationManager.currentStatus
+			.sink { [weak self] status in
+				switch status {
+				case .authorized:
+					self?.state = .data([])
+					self?.start()
+				case .denied:
+					self?.state = .error("Location has been denied.\n Please go to settings to allow location services.")
+				case .requesting:
+					self?.state = .error("Requesting location...")
+				}
+			}
+			.store(in: &cancellables)
+		
+		locationManager.currentLocation
+			.compactMap { $0 }
+			.sink { [weak self] _ in self?.getFlickrImage() }
+			.store(in: &cancellables)
+	}
+	
+	func start() {
+		locationManager.startTracking(within: 100)
+	}
+}
+
+// MARK: Image
 private extension TrackingViewModel {
 	@objc func getFlickrImage() {
 		Task {
-			do {
-				let image = try await flickrService.getImage()
-				Task { @MainActor in trackingImages.append(image) }
-			} catch {}
+			guard let image = await flickrService.getAnImage() else { return }
+			switch state {
+			case let .data(images):
+				Task { @MainActor in state = .data([image] + images) }
+			default:
+				Task { @MainActor in state = .data([image]) }
+			}
 		}
 	}
 }

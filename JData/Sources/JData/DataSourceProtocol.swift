@@ -1,7 +1,4 @@
 //
-//  RequestManager.swift
-//  JFoudationRepository
-//
 //  Created by João Pedro Fabiano Franco on 07.09.23.
 //
 

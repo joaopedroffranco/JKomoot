@@ -1,14 +1,12 @@
 //
-//  File.swift
-//  
-//
 //  Created by Joao Pedro Franco on 15/07/24.
 //
 
 import Foundation
+import JFoundation
 
 public protocol FlickrServiceProtocol {
-	func getImage() async throws -> String
+	func getAnImage() async -> ImageType?
 }
 
 public class FlickrService: FlickrServiceProtocol {
@@ -18,7 +16,8 @@ public class FlickrService: FlickrServiceProtocol {
 		self.dataSource = dataSource
 	}
 	
-	public func getImage() async throws -> String {
-		"workers"
+	public func getAnImage() async -> ImageType? {
+		guard let response: FlickrResponse = try? await dataSource.fetch(request: FlickrRequest.searchRandomImage) else { return nil }
+		return response.firstImage
 	}
 }

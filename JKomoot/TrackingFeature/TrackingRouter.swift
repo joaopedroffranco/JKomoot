@@ -1,7 +1,4 @@
 //
-//  TrackingRouter.swift
-//  JKomoot
-//
 //  Created by Joao Pedro Franco on 12/07/24.
 //
 
@@ -10,17 +7,11 @@ import JFoundation
 import UIKit
 
 class TrackingRouter: RouterProtocol {
-	var parentRouter: RouterProtocol?
-	var nextRouter: RouterProtocol?
-	
+	var parentRouter: RouterDelegate?
 	let navigatioController: UINavigationController
-	
-	init(
-		navigatioController: UINavigationController,
-		parentRouter: RouterProtocol
-	) {
+
+	init(navigatioController: UINavigationController) {
 		self.navigatioController = navigatioController
-		self.parentRouter = parentRouter
 	}
 	
 	func start() {
@@ -29,6 +20,7 @@ class TrackingRouter: RouterProtocol {
 	}
 	
 	func dismiss() {
+		navigatioController.popViewController(animated: true)
 		clean()
 	}
 	
@@ -37,15 +29,12 @@ class TrackingRouter: RouterProtocol {
 	}
 }
 
-extension TrackingRouter: TrackingRouterDelegate {}
-
 private extension TrackingRouter {
 	func makeTrackingViewController() -> UIViewController {
 		let viewModel = TrackingViewModel()
 		viewModel.router = self
 
 		let viewController = TrackingViewController(viewModel: viewModel)
-
 		return viewController
 	}
 }

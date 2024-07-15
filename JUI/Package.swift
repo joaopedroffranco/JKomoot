@@ -13,10 +13,12 @@ let package = Package(
 			name: "JUI",
 			targets: ["JUI"]),
 	],
-	dependencies: [],
+	dependencies: [
+		.package(name: "JFoundation", path: "../JFoundation"),
+	],
 	targets: [
 		.target(
 			name: "JUI",
-			dependencies: [])
+			dependencies: ["JFoundation"])
 	]
 )

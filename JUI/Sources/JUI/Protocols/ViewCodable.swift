@@ -1,7 +1,4 @@
 //
-//  File.swift
-//  
-//
 //  Created by Joao Pedro Franco on 15/07/24.
 //
 

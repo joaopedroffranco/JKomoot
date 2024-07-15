@@ -1,7 +1,4 @@
 //
-//  ViewController.swift
-//  JKomoot
-//
 //  Created by Joao Pedro Franco on 11/07/24.
 //
 
@@ -10,7 +7,7 @@ import JUI
 import JFoundation
 
 class HomeViewController: UIViewController {
-	weak var router: HomeRouterDelegate?
+	var router: HomeRouterDelegate?
 	
 	private lazy var startButton: UIButton = {
 		let button = UIButton()

@@ -1,11 +1,9 @@
 //
-//  SwiftUIView.swift
-//  
-//
 //  Created by Joao Pedro Franco on 15/07/24.
 //
 
 import SwiftUI
+import JFoundation
 
 public struct JImageCell: View {
 	var image: ImageType
@@ -15,29 +13,19 @@ public struct JImageCell: View {
 	}
 	
 	public var body: some View {
-		switch image {
-		case let .local(name):
-			Image(name, bundle: .module)
-				.resizable()
-		case let .remote(url):
-			AsyncImage(url: url) { image in
-				image
-			} placeholder: {
-				DesignSystem.Colors.background
-			}
-		}
+		CachedImage(image: image)
 	}
 }
 
 struct JImageCell_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			JImageCell(image: .local(name: "workers"))
+			JImageCell(image: .local("placeholder"))
 				.frame(width: 300, height: 200)
 				.previewLayout(.sizeThatFits)
 			
 			if let url = URL(string: "https://picsum.photos/200") {
-				JImageCell(image: .remote(url: url))
+				JImageCell(image: .remote(url))
 					.frame(width: 300, height: 200)
 					.previewLayout(.sizeThatFits)
 			}

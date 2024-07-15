@@ -13,11 +13,13 @@ let package = Package(
 			name: "JData",
 			targets: ["JData"]),
 	],
-	dependencies: [],
+	dependencies: [
+		.package(name: "JFoundation", path: "../JFoundation"),
+	],
 	targets: [
 		.target(
 			name: "JData",
-			dependencies: []),
+			dependencies: ["JFoundation"]),
 		.testTarget(
 			name: "JDataTests",
 			dependencies: ["JData"]),
