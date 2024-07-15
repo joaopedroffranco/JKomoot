@@ -6,35 +6,18 @@ import SwiftUI
 
 public enum DesignSystem {
   public enum Colors {
-    public static let header = Color.jBlack.opacity(0.9)
-    public static let title = Color.jBlack
-    public static let description = Color.jDarkGray
-    public static let secondary = Color.jBlack
-    public static let background = Color.white
-    public static let separator = Color.jGray
-    public static let shadow = Color.jBlack.opacity(0.25)
+		public static let background = Color.white
+		public static let primary = Color.green
+		public static let secondary = Color.white
   }
 
   public enum Fonts {
-    public static let title = Font.system(size: 16).bold()
-    public static let info = Font.system(size: 12).bold()
-    public static let description = Font.system(size: 16)
-    public static let price = Font.system(size: 16).bold()
-    public static let header = Font.system(size: 20)
-    public static let button = Font.system(size: 16).bold()
-  }
-
-  public enum Borders {
-    public static let small = 1.0
-    public static let medium = 2.0
-    public static let large = 4.0
+    public static let button = Font.system(size: 16)
+		public static let uiButton = UIFont.systemFont(ofSize: 16)
   }
 
   public enum Radius {
-    public static let small: CGFloat = 2.0
-    public static let medium: CGFloat = 4.0
-    public static let large: CGFloat = 6.0
-    public static let shadow: CGFloat = 6.0
+		public static let `default`: CGFloat = 6.0
   }
 
   public enum Spacings {
@@ -46,12 +29,5 @@ public enum DesignSystem {
     public static let xxs = 6.0
     public static let xxxs = 4.0
     public static let xxxxs = 2.0
-  }
-
-  public enum Icons {
-    public static let filter = "filter"
-    public static let map = "map"
-    public static let workers = "workers"
-    public static let warning = "warning"
   }
 }

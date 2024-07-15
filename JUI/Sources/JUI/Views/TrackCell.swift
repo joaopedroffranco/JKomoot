@@ -19,7 +19,7 @@ struct TrackCell: View {
 			AsyncImage(url: url) { image in
 				image
 			} placeholder: {
-				Color.blue
+				DesignSystem.Colors.background
 			}
 		}
 	}
