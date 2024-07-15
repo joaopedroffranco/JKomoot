@@ -20,6 +20,7 @@ class HomeRouter: RouterProtocol {
 	}
 	
 	func start() {
+//		didStartTracking()
 		let viewController = HomeViewController()
 		viewController.router = self
 		navigationController.setViewControllers([viewController], animated: false)

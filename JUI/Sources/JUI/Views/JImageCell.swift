@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct TrackCell: View {
+public struct JImageCell: View {
 	var image: ImageType
 	
-	var body: some View {
+	public init(image: ImageType) {
+		self.image = image
+	}
+	
+	public var body: some View {
 		switch image {
 		case let .local(name):
 			Image(name, bundle: .module)
@@ -25,15 +29,15 @@ struct TrackCell: View {
 	}
 }
 
-struct TrackCell_Previews: PreviewProvider {
+struct JImageCell_Previews: PreviewProvider {
 	static var previews: some View {
 		Group {
-			TrackCell(image: .local(name: "workers"))
+			JImageCell(image: .local(name: "workers"))
 				.frame(width: 300, height: 200)
 				.previewLayout(.sizeThatFits)
 			
 			if let url = URL(string: "https://picsum.photos/200") {
-				TrackCell(image: .remote(url: url))
+				JImageCell(image: .remote(url: url))
 					.frame(width: 300, height: 200)
 					.previewLayout(.sizeThatFits)
 			}
