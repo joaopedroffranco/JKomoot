@@ -34,7 +34,7 @@ class TrackingViewModel: ObservableObject {
 	}
 	
 	deinit {
-		locationManager.stopTracking()
+		stop()
 	}
 }
 
@@ -49,6 +49,7 @@ private extension TrackingViewModel {
 					self?.start()
 				case .denied:
 					self?.state = .error("Location has been denied.\n Please go to settings to allow location services.")
+					self?.stop()
 				case .requesting:
 					self?.state = .error("Requesting location...")
 				}
@@ -63,6 +64,10 @@ private extension TrackingViewModel {
 	
 	func start() {
 		locationManager.startTracking(within: 100)
+	}
+	
+	func stop() {
+		locationManager.stopTracking()
 	}
 }
 

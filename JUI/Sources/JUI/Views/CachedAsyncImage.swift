@@ -32,7 +32,7 @@ struct CachedImage: View {
 			return image
 		}
 		
-		return Image("placeholder")
+		return Image("placeholder", bundle: .module)
 	}
 }
 

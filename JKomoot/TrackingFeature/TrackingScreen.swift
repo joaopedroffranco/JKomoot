@@ -6,7 +6,7 @@ import SwiftUI
 import JUI
 import JFoundation
 
-enum TrackingScreenState {
+enum TrackingScreenState: Equatable {
 	case idle
 	case data([ImageType])
 	case error(String)

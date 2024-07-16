@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		window?.rootViewController = navigationController
 		window?.makeKeyAndVisible()
+		window?.overrideUserInterfaceStyle = .light
 
 		mainRouter = MainRouter(navigationController: navigationController)
 		mainRouter?.start()
