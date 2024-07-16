@@ -5,10 +5,10 @@
 import SwiftUI
 import JFoundation
 
-struct CachedImage: View {
+public struct CachedImage: View {
 	var image: ImageType
 	
-	var body: some View {
+	public var body: some View {
 		switch image {
 		case let .local(name):
 			Image(name, bundle: .module)

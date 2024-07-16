@@ -14,7 +14,7 @@ public protocol LocationManagerProtocol {
 }
 
 public class LocationManager: NSObject, LocationManagerProtocol {
-  var nativeLocationManager: CLLocationManager
+  private var nativeLocationManager: CLLocationManager
 
   public var currentStatus: CurrentValueSubject<LocationAuthorizationStatus, Never>
 	public var currentLocation: CurrentValueSubject<CLLocation?, Never>
@@ -31,6 +31,7 @@ public class LocationManager: NSObject, LocationManagerProtocol {
 	public func startTracking(within: Double) {
 		nativeLocationManager.allowsBackgroundLocationUpdates = true
 		nativeLocationManager.distanceFilter = within
+		nativeLocationManager.pausesLocationUpdatesAutomatically = false
 		nativeLocationManager.startUpdatingLocation()
 	}
 	

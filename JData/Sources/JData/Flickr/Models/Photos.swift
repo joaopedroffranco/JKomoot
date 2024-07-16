@@ -4,10 +4,12 @@
 
 import Foundation
 
-public struct Photo: Decodable {
+public struct Photo {
 	public let id: String
 	public let owner: String
 	public let secret: String
 	public let server: String
 	public let title: String?
 }
+
+extension Photo: Decodable {}

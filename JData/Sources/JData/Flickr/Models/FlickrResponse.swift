@@ -5,12 +5,12 @@
 import Foundation
 import JFoundation
 
-public struct FlickrResponse: Decodable {
+public struct FlickrResponse {
 	public let photos: [Photo]
 	public var firstImage: ImageType? { image }
 }
 
-extension FlickrResponse {
+extension FlickrResponse: Decodable {
 	enum CodingKeys: String, CodingKey {
 		case response = "photos"
 		case photos = "photo"

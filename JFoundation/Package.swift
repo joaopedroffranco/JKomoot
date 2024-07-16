@@ -18,8 +18,5 @@ let package = Package(
 		.target(
 			name: "JFoundation",
 			dependencies: []),
-		.testTarget(
-			name: "JFoundationTests",
-			dependencies: ["JFoundation"]),
 	]
 )
