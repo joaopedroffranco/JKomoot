@@ -6,7 +6,6 @@ import UIKit
 
 public protocol RouterProtocol: RouterDelegate {
   var parentRouter: RouterDelegate? { get set }
-
   func start()
 }
 

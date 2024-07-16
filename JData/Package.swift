@@ -22,6 +22,8 @@ let package = Package(
 			dependencies: ["JFoundation"]),
 		.testTarget(
 			name: "JDataTests",
-			dependencies: ["JData"]),
+			dependencies: ["JData"],
+			resources: [.process("JSONs")]
+		),
 	]
 )

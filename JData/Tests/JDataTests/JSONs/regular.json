@@ -1,0 +1,22 @@
+{
+    "photos": {
+        "page": 2429,
+        "pages": 159064,
+        "perpage": 1,
+        "total": 159064,
+        "photo": [
+            {
+                "id": "53767225458",
+                "owner": "97632722@N08",
+                "secret": "0464c7b852",
+                "server": "65535",
+                "farm": 66,
+                "title": "R5__1677",
+                "ispublic": 1,
+                "isfriend": 0,
+                "isfamily": 0
+            }
+        ]
+    },
+    "stat": "ok"
+}

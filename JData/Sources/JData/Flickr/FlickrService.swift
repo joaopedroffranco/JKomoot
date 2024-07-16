@@ -10,9 +10,9 @@ public protocol FlickrServiceProtocol {
 }
 
 public class FlickrService: FlickrServiceProtocol {
-	var dataSource: RemoteDataSource
+	var dataSource: DataSourceProtocol
 	
-	public init(dataSource: RemoteDataSource = RemoteDataSource()) {
+	public init(dataSource: DataSourceProtocol = RemoteDataSource()) {
 		self.dataSource = dataSource
 	}
 	
